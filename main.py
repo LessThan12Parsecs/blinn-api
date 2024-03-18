@@ -38,6 +38,7 @@ async def describe_image(shader_data: ShaderData):
     message_response = client.messages.create(
         model="claude-3-opus-20240229",
         max_tokens=4096,
+        system="Respond only with GLSL with no introduction or explanation and in plain text",
         messages=[
             {
                 "role": "user",
